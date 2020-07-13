@@ -9,6 +9,8 @@ cachemean <- function(x, ...) {
        x$setmean(m)
        m 
    }
+   
+   ##below mentioned code creates a matrix, at the same time the functions it sets the inverse of it are mentioned below
 makeCasheMatrix <- function(x=matrix()) {
      inv <- NULL
     set <- function(y){
@@ -20,6 +22,7 @@ makeCasheMatrix <- function(x=matrix()) {
      getInverse <- function() {inv}
      list(set=set,get=get, setInverse=setInverse,getInverse=getInverse)
    }
+   ##below mentioned code is used for getting the inverse of the matrix
 cacheSolve <- function(x, ...) {
        inv <-x$getInverse()
       if(!is.null(inv)) {
